@@ -1,1 +1,8 @@
 sudo docker run --name meu-mysql -p 8080:3306 
+
+
+
+CREATE DATABASE zabbix CHARACTER SET utf8 COLLATE utf8_bin;
+CREATE USER 'zabbix'@'%' IDENTIFIED BY 'sua_senha';
+GRANT ALL PRIVILEGES ON zabbix.* TO 'zabbix'@'%';
+FLUSH PRIVILEGES;
